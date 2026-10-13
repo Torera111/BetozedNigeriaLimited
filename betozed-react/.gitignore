@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.sites-runtime/
+coverage/
+*.local
+*.zip
+!public/downloads/*.zip
+.env
+.env.*
+!.env.example

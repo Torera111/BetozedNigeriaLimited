@@ -1,0 +1,92 @@
+{
+  "logo": {
+    "file": "images/logo.png",
+    "width": 121,
+    "height": 41
+  },
+  "hero-printer": {
+    "file": "images/hero-printer.webp",
+    "width": 391,
+    "height": 268
+  },
+  "flex-banner": {
+    "file": "images/flex-banner.webp",
+    "width": 179,
+    "height": 120
+  },
+  "flex-flock": {
+    "file": "images/flex-flock.webp",
+    "width": 179,
+    "height": 120
+  },
+  "plotting": {
+    "file": "images/plotting.webp",
+    "width": 179,
+    "height": 120
+  },
+  "dtf-powder": {
+    "file": "images/dtf-powder.webp",
+    "width": 179,
+    "height": 120
+  },
+  "dtf-ink": {
+    "file": "images/dtf-ink.webp",
+    "width": 179,
+    "height": 120
+  },
+  "monogram": {
+    "file": "images/monogram.webp",
+    "width": 179,
+    "height": 120
+  },
+  "feather-banner": {
+    "file": "images/feather-banner.webp",
+    "width": 179,
+    "height": 120
+  },
+  "laminating-film": {
+    "file": "images/laminating-film.webp",
+    "width": 179,
+    "height": 120
+  },
+  "sublimation-ink": {
+    "file": "images/sublimation-ink.webp",
+    "width": 179,
+    "height": 119
+  },
+  "monogram-design": {
+    "file": "images/monogram-design.webp",
+    "width": 179,
+    "height": 119
+  },
+  "borderless-design": {
+    "file": "images/borderless-design.webp",
+    "width": 179,
+    "height": 119
+  },
+  "eco-solvent-ink": {
+    "file": "images/eco-solvent-ink.webp",
+    "width": 179,
+    "height": 119
+  },
+  "application-signage": {
+    "file": "images/application-signage.webp",
+    "width": 245,
+    "height": 171
+  },
+  "application-garment": {
+    "file": "images/application-garment.webp",
+    "width": 245,
+    "height": 171
+  },
+  "application-display": {
+    "file": "images/application-display.webp",
+    "width": 245,
+    "height": 171
+  },
+  "about-workshop": {
+    "file": "images/about-workshop.webp",
+    "width": 324,
+    "height": 239
+  }
+}
