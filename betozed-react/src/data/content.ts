@@ -28,13 +28,13 @@ export const products: Product[] = [
   { id: 'monogram', name: 'Monogram', category: 'Embroidery', filter: 'Printing materials', description: 'Discuss materials for embroidered names and branding.', alt: 'Embroidery thread spools arranged around a navy polo shirt' },
   { id: 'feather-banner', name: 'Feather Banner', category: 'Advertising material', filter: 'Advertising', description: 'Display materials for events and business visibility.', alt: 'Two feather banner displays with navy and orange graphics' },
   { id: 'laminating-film', name: 'Laminating Film', category: 'Finishing material', filter: 'Printing materials', description: 'Film for protecting and finishing printed graphics.', alt: 'Two rolls of clear laminating film' },
-  { id: 'sublimation-ink', name: 'Sublimation Ink', category: 'Printing ink', filter: 'Consumables', description: 'Ink for sublimation transfer printing applications.', alt: 'Sublimation ink bottles beside a printed mug' },
+  { id: 'sublimation-ink', name: 'Sublimation Ink', category: 'Printing ink', filter: 'Consumables', description: 'Ink for sublimation transfer printing applications.', alt: 'Sublimation ink bottles' },
   { id: 'monogram-design', name: 'Monogram Design', category: 'Branding application', filter: 'Printing materials', description: 'Material enquiries for detailed embroidered designs.', alt: 'A navy and orange embroidered monogram in an embroidery hoop' },
   { id: 'borderless-design', name: 'Borderless Design', category: 'Print application', filter: 'Advertising', description: 'Explore materials for clean, edge-to-edge print designs.', alt: 'A printed panel with an edge-to-edge geometric design' },
   {id: 'roll-up-banner', name: 'Roll-up Banner',
     category: 'Advertising material', filter: 'Advertising', description: 'Portable display banners for events, promotions and business displays', alt: 'Roll-up banner display at an event'
   },
-  { id: 'eco-solvent-ink', name: 'Eco-solvent ink', category: 'Printing ink', filter: 'Consumables', description: 'Ink enquiries for compatible large-format printers.', alt: 'Cyan, magenta, yellow and black eco-solvent ink bottles' },
+  { id: 'eco-solvent-ink', name: 'Eco-solvent ink', category: 'Printing ink', filter: 'Consumables', description: 'Ink enquiries for compatible large-format printers.', alt: 'Cyan, magenta, yellow and black eco-solvent ink bottles' }, {id: 'sav', name: 'Self-adhesive vinyl', category: 'Printing material', filter: 'Printing materials', description: 'Printable self-adhesive vinyl for signs, decals, window graphics and displays', alt: ''},
   
 ];
 
