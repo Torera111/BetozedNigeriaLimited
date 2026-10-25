@@ -147,6 +147,14 @@ figcaption { color: var(--muted); font-size: 10px; line-height: 1.6; text-transf
 .check-list { display: grid; gap: 14px; padding: 0; list-style: none; }
 .check-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; line-height: 1.5; }
 .check-list .icon { width: 16px; height: 16px; margin-top: 1px; }
+.about-copy > p.company-registration,
+.footer-brand > p.company-registration {
+  margin-top: -16px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
 
 /* FAQ */
 .faq-grid { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 104px; }
