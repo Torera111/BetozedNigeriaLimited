@@ -9,7 +9,16 @@ export default function Footer({ onFilter }: { onFilter: (filter: ProductFilter)
       <p className="company-registration">RC: 1476823</p><p>Printing materials, printing consumables and advertising materials for professional and business applications.</p></div>
       <nav className="footer-links" aria-label="Explore"><h3>Explore</h3>{navigation.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}</nav>
       <nav className="footer-links" aria-label="Our range"><h3>Our range</h3>{categories.map((category) => <a href="#products" key={category.title} onClick={() => onFilter(category.filter)}>{category.title}</a>)}<a href="#products" onClick={() => onFilter('Printing materials')}>Garment &amp; textile supplies</a></nav>
-      <nav className="footer-links" aria-label="Enquiries"><h3>Enquiries</h3>{['Request a quotation', 'Product questions', 'Business supply enquiries', 'Contact through our form'].map((label) => <a href="#enquiry" key={label}>{label}</a>)}</nav>
+      <nav className="footer-links" aria-label="Contact Betozed">
+        <h3>Contact us</h3>
+        <a href='https://wa.me/2348086150336' target="_blank" rel="noreferrer">WhatsApp</a>
+        <a href="mailto:sales@betozed.com">Email us</a>
+        <a className="footer-address" href="https://www.google.com/maps/search/?api=1&query=No%204%2C%20Aribisala%20Street%2C%20Iyana%20Lodge%2C%20Ibadan%2C%20Behind SIMS Digital%20Nigeria" target="_blank" rel="noreferrer">
+          <span>Address</span>
+          No 4, Aribisala street, Iyana Lodge, Ibadan, Nigeria.
+        </a>
+        <a href='#enquiry'>Request a quotation</a>
+      </nav>
     </div><div className="footer-bottom"><p>© 2026 Betozed Nigeria Limited. All rights reserved.</p><p>Product specifications confirmed on enquiry.</p></div></div></footer>
   </>;
 }
