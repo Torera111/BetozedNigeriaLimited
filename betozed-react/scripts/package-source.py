@@ -9,7 +9,7 @@ files = [
     root / name for name in (
         'README.md', 'package.json', 'package-lock.json', 'tsconfig.json',
         'vite.config.ts', 'vitest.config.ts', 'index.html', '.env.example',
-        '.gitignore', 'public/favicon.svg',
+        '.gitignore', 'public/favicon.png',
     )
 ]
 for directory in ('src', 'tests', 'scripts', 'public/images'):
