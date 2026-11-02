@@ -38,6 +38,11 @@ describe('Enquiry delivery adapter', () => {
     await expect(submitEnquiry(sample, '/api/enquiries')).rejects.toThrow('could not be sent');
   });
 
+  it('shows a safe error returned by the API', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(new Response(JSON.stringify({ error: { message: 'WhatsApp contact is not configured for enquiries.' } }), { status: 503 })));
+    await expect(submitEnquiry(sample, '/api/enquiries')).rejects.toThrow('WhatsApp contact is not configured');
+  });
+
   it('aborts stalled delivery and clears its timeout', async () => {
     vi.useFakeTimers();
     vi.stubGlobal('fetch', vi.fn((_url, options) => new Promise((_resolve, reject) => options.signal.addEventListener('abort', () => reject(new DOMException('Aborted', 'AbortError'))))));

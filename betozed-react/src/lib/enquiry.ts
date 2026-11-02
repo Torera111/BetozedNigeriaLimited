@@ -59,7 +59,8 @@ export async function submitEnquiry(enquiry: Enquiry, endpoint = import.meta.env
   const timeout = window.setTimeout(() => controller.abort(), 20_000);
   try {
     const response = await fetch(endpoint, { method: 'POST', body, signal: controller.signal, headers: { Accept: 'application/json' } });
-    if (!response.ok) throw new Error('Your enquiry could not be sent. Please try again.');
+    const result = await response.json().catch(() => null) as { error?: { message?: string } } | null;
+    if (!response.ok) throw new Error(result?.error?.message || 'Your enquiry could not be sent. Please try again.');
     return { mode: 'sent' };
   } catch (error) {
     if (controller.signal.aborted) throw new Error('The request timed out. Please try again.');
