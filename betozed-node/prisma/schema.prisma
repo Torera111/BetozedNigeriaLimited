@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum EnquiryStatus {
+  NEW
+  CONTACTED
+  QUOTED
+  CLOSED
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  category    String
+  filter      String
+  description String   @db.Text
+  alt         String
+  imageUrl    String?
+  isActive    Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([isActive, filter, sortOrder])
+  @@map("products")
+}
+
+model Enquiry {
+  id                   String        @id @default(cuid())
+  name                 String
+  company              String        @default("")
+  email                String
+  phone                String
+  productInterest      String
+  quantity             String        @default("")
+  location             String        @default("")
+  requirements         String        @db.Text
+  contactConsent       Boolean
+  status               EnquiryStatus @default(NEW)
+  referenceFileName    String?
+  referenceMimeType    String?
+  referenceStorageKey  String?
+  createdAt            DateTime      @default(now())
+  updatedAt            DateTime      @updatedAt
+
+  @@index([status, createdAt])
+  @@index([email])
+  @@map("enquiries")
+}
