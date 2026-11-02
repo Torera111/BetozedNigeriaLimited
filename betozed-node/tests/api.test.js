@@ -29,6 +29,14 @@ describe('Betozed API', () => {
     const response = await request(app).get('/api/health').expect(200);
     assert.deepEqual(response.body, { status: 'ok' });
   });
+git
+  it('allows the production Netlify site to make API requests', async () => {
+    const response = await request(app).options('/api/enquiries')
+      .set('Origin', 'https://betozednig.netlify.app')
+      .set('Access-Control-Request-Method', 'POST')
+      .expect(204);
+    assert.equal(response.headers['access-control-allow-origin'], 'https://betozednig.netlify.app');
+  });
 
   it('lists active products and filters by catalog group', async () => {
     const response = await request(app).get('/api/products?filter=Consumables').expect(200);

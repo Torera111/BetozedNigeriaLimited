@@ -74,8 +74,13 @@ export function createApp({ prisma, whatsappPhoneNumber = process.env.WHATSAPP_P
   if (!prisma) throw new Error('A Prisma client must be provided to createApp.');
 
   const app = express();
-  const origins = (frontendOrigins || 'http://localhost:4173,http://localhost:5173')
-    .split(',').map((origin) => origin.trim()).filter(Boolean);
+  app.set('trust proxy', 1);
+  const origins = [...new Set([
+    'http://localhost:4173',
+    'http://localhost:5173',
+    'https://betozednig.netlify.app',
+    ...(frontendOrigins || '').split(',').map((origin) => origin.trim()).filter(Boolean),
+  ])];
   const upload = makeUploadMiddleware(path.resolve(uploadDirectory));
 
   app.disable('x-powered-by');
